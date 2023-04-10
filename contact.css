@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  --primary: #e3dfd6;
+  --secondary: #ff5757;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--primary);
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 35px;
+  height: fit-content;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  border-left: 2px solid black;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+header img {
+  height: 80px;
+  width: 160px;
+  margin: 20px;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+#hamburger {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+  border: none;
+  margin-right: 50px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 50px;
+  color: var(--secondary);
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+nav ul li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  background-image: url(/photos/pixabay-37351.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: var(--primary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer div h2 {
+  margin-top: 50px;
+  margin-left: 0;
+  font-size: 40px;
+  color: var(--secondary);
+  border-left: 3px solid var(--primary) !important;
+}
+
+footer div p {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+/***********************************/
+/* for every */
+section {
+  padding-top: 50px;
+}
+@media only screen and (max-width: 920px) {
+  .menu-toggle {
+    color: red;
+    display: block;
+  }
+
+  .menu {
+    color: #ff5757;
+    display: none; /* initially hide the menu */
+  }
+
+  .menu-open .menu {
+    display: block; /* show the menu when the .menu-open class is added to the menu */
+  }
+  .second-section article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .article-pink {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .container-fifth div p {
+    width: fit-content;
+    font-size: 18px;
+  }
+  footer {
+    display: block;
+    padding: 80px;
+  }
+
+  footer div p {
+    text-shadow: 2px 2px 2px var(--secondary);
+    padding: 0;
+    margin-top: 0;
+  }
+  footer div:nth-child(1) {
+    margin-top: 100px;
+  }
+}

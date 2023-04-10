@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  --primary: #e3dfd6;
+  --secondary: #ff5757;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 35px;
+  height: fit-content;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  border-left: 2px solid black;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  height: 80px;
+  width: 160px;
+  margin: 20px;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+#hamburger {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+  border: none;
+  margin-right: 50px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 50px;
+  color: var(--secondary);
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+nav ul li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+/* second section */
+
+.second-section {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.second-section article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.second-section article h2 {
+  height: fit-content;
+  border-left: 2px solid black;
+}
+
+.div-1 {
+  background-image: url(/photos/activebreak.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.div-2 {
+  background-image: url(/photos/weights.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.div-3 {
+  background-image: url(/photos/trainer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.div-4 {
+  background-image: url(/photos/training.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.second-section article h3 {
+  background-color: var(--secondary);
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 50px;
+  padding: 5px;
+  position: absolute;
+  font-size: 14px;
+}
+
+/* fifth section */
+
+.fifth-section {
+  background-image: url(/photos/victor-freitas-841130.jpg);
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  padding: 80px;
+}
+
+.fifth-section h2 {
+  width: 300px;
+  text-align: left;
+  color: var(--secondary);
+  border-left: 3px solid var(--primary) !important;
+  font-size: 45px;
+}
+.container-fifth {
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-fifth div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fifth div p {
+  font-size: 25px;
+  padding: 20px;
+  width: 500px;
+}
+
+h5 {
+  color: var(--secondary);
+  font-size: 80px;
+}
+
+.about-sandra {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 200px;
+}
+
+.about-sandra p {
+  width: 500px;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.img-sandra {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary);
+  background-image: url(/photos/sandra.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 50px;
+}
+
+/***********************************/
+/* for every */
+section {
+  padding-top: 50px;
+}
+@media only screen and (max-width: 920px) {
+  .menu-toggle {
+    color: red;
+    display: block;
+  }
+
+  .menu {
+    color: #ff5757;
+    display: none; /* initially hide the menu */
+  }
+
+  .menu-open .menu {
+    display: block; /* show the menu when the .menu-open class is added to the menu */
+  }
+  .second-section article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .article-pink {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .container-fifth div p {
+    width: fit-content;
+    font-size: 18px;
+  }
+}
